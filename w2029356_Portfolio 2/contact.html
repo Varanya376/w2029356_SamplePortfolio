@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Font Awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!--Link to Google fonts for Spectral font with 400 and 700 font wights-->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Spectral">
+     <!--Link to external CSS file for styling the page-->
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Contact Me</title>
+</head>
+<body>
+    
+    <header> <!-- Header section with the page title and navigation menu -->
+        <div class="header-content">
+            <h1>Contact Me</h1>
+            <nav> <!-- Navigation bar containing links to other pages (Home, About, Blog, Contact) -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main content area containing contact information and a contact form -->
+    <main>
+        <section class="contact-info"> <!-- Section for contact information -->
+            <h2>Get in Touch</h2>
+            <p>If you have any questions, comments, or would like to connect, feel free to reach out through the form below or via LinkedIn</p>
+        </section>
+
+        <section class="contact-form"> <!-- Section containing a contact form for users to fill out -->
+            <h2>Contact Form</h2>
+            <form action="index.html" method="get"> <!--Contact form with GET method for submitting data-->
+                <label for="name">Name:</label> <!-- Label and input for user's name -->
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                <!-- Label and input for user's email address -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+
+                <!-- Textarea for user’s message with placeholder text and specific row height -->
+                <textarea id="message" name="message" placeholder="Your Message" rows="3"></textarea>
+
+                <!-- Submit button to send the form data -->
+                <button type="submit">Send Message</button> <!-- Submit button to send the form data -->
+            </form>
+        </section>
+    </main>
+
+    <footer> <!-- Footer section containing social media links and copyright information -->
+        <h3>Connect with Me</h3>
+        <ul class="social-links transition" id="page_links"> <!-- Unordered list for social media links with specific CSS classes for styling -->
+            <li><a href="https://github.com/" target="_blank"> <!-- Link to GitHub profile opening in a new tab -->
+                <i class="fa-brands fa-github"></i> GitHub 
+            </a>
+        </li>  
+        <li><a href="https://www.linkedin.com/in/varanya-saluja-795215240/" target="_blank"> <!-- Link to LinkedIn profile opening in a new tab -->
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+    </li>
+        </ul>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

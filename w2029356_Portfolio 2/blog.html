@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Font Awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!--Link to Google fonts for Spectral font with 400 and 700 font wights-->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Spectral">
+    <!--Link to external CSS file for styling the page-->
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>My Blogs</title>
+</head>
+<body>
+    <header> <!-- Header section with blog title and navigation menu -->
+        <div class="header-content">
+            <h1>My Blog</h1>
+            <nav> <!-- Navigation bar with links to other pages in the website -->
+                <ul>
+                    <!-- List of navigation items linking to various pages (e.g., Home, About, Blog, Contact) -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main content area for blog posts -->
+    <main>
+        <section class="blog-post"> <!-- First blog post section -->
+            <h2>Understanding Responsive Web Design</h2>
+            <time datetime="2024-01-24">January 24, 2024</time> <!-- Date of the blog post with a datetime attribute for structured date information -->
+            <!-- Brief description of the blog post content -->
+            <p>Responsive web design is crucial for creating websites that function seamlessly across various devices. It ensures that users have an optimal viewing experience, regardless of screen size.</p>
+            <p>In this blog post, I will cover the basics of responsive design, including flexible layouts, media queries, and the importance of fluid images. Embracing these principles can significantly enhance user satisfaction.</p>
+            <a href="https://medium.com/@zalewski/responsive-web-design-in-2024-trends-and-techniques-4cd77b7b68a5#:~:text=In%202024%2C%20we%20see%20an,ensuring%20consistent%20design%20across%20devices.&text=Responsive%20design%20now%20goes%20beyond%20layout%20changes." class="read-more" target="_blank">Read More</a> <!-- Link to read the full blog post with a target attribute to open in a new tab -->
+        </section>
+    
+        <section class="blog-post"> <!-- Second blog post section -->
+            <h2>Getting Started with JavaScript</h2>
+            <time datetime="2024-08-23">August 23, 2024</time>
+            <!-- Brief description of the blog post content -->
+            <p>JavaScript is one of the core technologies of the web, alongside HTML and CSS. It enables dynamic content, interactive features, and complex animations on web pages.</p>
+            <p>In this post, I will introduce you to JavaScript basics, including variables, data types, and functions. Whether you're a complete beginner or looking to refresh your knowledge, this guide will provide a solid foundation.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps" class="read-more" target="_blank">Read More</a>
+        </section>
+    </main>
+
+    <footer> <!-- Footer section with social media links and copyright information -->
+        <h3>Connect with Me</h3>
+        <ul class="social-links transition" id="page_links"> <!-- Unordered list of social media links with specific CSS classes for styling -->
+            <li>
+                <a href="https://github.com/" target="_blank"> <!-- Link to GitHub profile opening in a new tab -->
+                    <i class="fa-brands fa-github"></i> GitHub 
+            <li>
+                <a href="https://www.linkedin.com/in/varanya-saluja-795215240/" target="_blank"> <!-- Link to LinkedIn profile opening in a new tab -->
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+        </ul>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

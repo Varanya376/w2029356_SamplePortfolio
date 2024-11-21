@@ -1,0 +1,527 @@
+/* General Reset */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Includes padding and border in the element's total width/height */
+}
+
+[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+[href^="https"] {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Spectral', sans-serif; /* Sets a custom font for the body text */
+    line-height: 1.6; /* Increases line height for better readability */
+    color: #2c3e50; /* Sets a dark color for text */
+    background: #ecf0f1; 
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to right, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9)) no-repeat center center; /* Adds gradient overlay on background overlay */
+    background-size: cover; /* Scales background image to cover entire header area */
+    color: white; 
+    padding: 4rem 0; /* Adds vertical padding for spacing */
+    text-align: center; 
+    position: relative; /* Sets up for absolute positioning of child elements */
+}
+
+.header-content {
+    position: relative; /* Allows for stacking order with z-index */
+    z-index: 1;        /* Positions element above other relative elements */
+}
+
+header h1 {
+    font-size: 3rem; /* Increases header font size */
+    margin-bottom: 1rem; /* Adds space below the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+/* Navigation Styles */
+nav ul {
+    display: flex; /* Creates horizontal list layout */
+    justify-content: center; /* Centers navigation items */
+    margin-top: 1rem; /* Adds space above navigation */
+    padding: 0; 
+    list-style: none;  /* Removes bullet points from list */
+}
+
+nav ul li {
+    margin: 0 2rem; /* Adds horizontal space between each list item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; 
+    font-size: 1.2rem; 
+    padding: 0.5rem 1rem; /* Adds padding around links */
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover transitions */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Changes background on hover */
+    transform: scale(1.1); /* Slightly increases size for emphasis */
+}
+
+/* Hero Section with Animation */
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero {
+    animation: fade-in 1.5s ease-out;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    padding: 3rem; /* Adds padding inside hero section */
+    border-radius: 15px; 
+    text-align: center; 
+    margin-bottom: 2rem; /* Adds space below hero section */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+#hero h2 {
+    font-size: 2.8rem; /* Sets font size for hero heading */
+    margin-bottom: 1rem; /* Adds space below heading */
+    color: #2c3e50; 
+}
+
+#hero p {
+    font-size: 1.3rem; /* Sets font size for hero paragraph */
+    margin-bottom: 1.5rem; /* Adds space below paragraph */
+}
+
+/*Generated Content with Pseudo-Elements*/
+
+#hero::before {
+    content: "";
+    font-size: 2rem;
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Call-to-Action Button */
+.lrn-button {
+    display: inline-block; /* Allows padding to be applied */
+    padding: 0.8rem 2rem; /* Adds padding to button */
+    background: #27ae60; /* Sets green background */
+    color: white; /* Sets text color to white */
+    text-decoration: none; /* Removes underline from text */
+    border-radius: 25px; 
+    transition: background 0.3s, transform 0.3s; /* Adds hover effects */
+    font-size: 1.1rem; /* Sets font size */
+}
+
+.lrn-button::after {
+    content: "";
+    padding-left: 0.5rem;
+}
+
+.lrn-button:hover {
+    background: #219653; /* Changes background color on hover */
+    transform: translateY(-3px); /* Moves button up slightly */
+}
+
+/* Projects Section */
+#projects {
+    margin-top: 2rem; /* Adds space above the projects section */
+}
+
+.project {
+    background: #ffffff; /* Sets background to white */
+    padding: 2rem; /* Adds padding inside each project */
+    border-radius: 15px; /* Rounds corners */
+    margin-bottom: 1.5rem; /* Adds space below each project */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    border: 2px solid #2980b9;
+    transition: transform 0.3s, box-shadow 0.3s; /* Adds smooth hover effects */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lifts project slightly on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+}
+
+.project:nth-of-type(odd) {
+    background: #f5f5f5;
+}
+
+.project:first-of-type {
+    border: 2px solid #2980b9;
+}
+
+.project h3 {
+    font-size: 1.7rem;
+}
+
+.project h3 a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project h3 a:hover {
+    color: #3498db;
+}
+
+/* Skills Section */
+#skills {
+    margin-top: 2rem;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    background: #eaeaea; /* Sets light background */
+    padding: 1.5rem; /* Adds padding for spacing */
+    margin: 0.5rem 0; /* Adds vertical margin */
+    border-radius: 10px; 
+    border-left: 5px solid #ff6b6b; /* Adds colored left border */
+    transition: background 0.3s, transform 0.3s; /* Smooth hover effects */
+    position: relative;
+    padding-left: 1.5rem; 
+}
+
+/* Use :nth-child and :nth-of-type */
+.skills-list li:nth-child(2n) {
+    background: #d5d5d5; /* Different background for even skill items */
+}
+
+.skills-list li:nth-of-type(odd) {
+    border-left-color: #2980b9; /* Change border color for odd items */
+}
+
+.skills-list li:hover {
+    background: #d5d5d5; /* Changes background color on hover */
+    transform: translateY(-3px); /* Moves item up slightly */
+}
+
+/* Structural Selector*/
+.skills-list li:first-of-type {
+    border-left-color: #3498db;
+}
+
+.skills-list li:last-of-type {
+    border-left-color: #27ae60;
+}
+
+/* Negation Pseudo-Class */
+.skills-list li:not(:last-child) {
+    border-bottom: 1px solid #ccc; /* Add a border between all but the last item */
+}
+
+/* Hobbies Section */
+#hobbies {
+    margin-top: 2rem;
+}
+
+.hobbies-list {
+    list-style: none;
+}
+
+.hobbies-list li {
+    background: #eaeaea; /* Light grey background for list items */
+    padding: 1.5rem; /* Adds padding inside each list item */
+    margin: 0.5rem 0; /* Adds vertical space between items */
+    border-radius: 10px; /* Rounds corners of list items */
+    border-left: 5px solid #f06d06; /* Adds a colored left border */
+    transition: background 0.3s, transform 0.3s; /* Smooth background and transform changes */
+    position: relative;
+    padding-left: 1.5rem; /* Additional padding for inner content */
+}
+
+.hobbies-list li:hover {
+    background: #d5d5d5; /* Changes background color on hover */
+    transform: translateY(-3px); /* Slightly raises the item on hover */
+}
+
+/* Social Media Links */
+#social-media {
+    margin-top: 2rem; /* Adds space above social media section */
+    text-align: center; /* Centers social media section */
+}
+
+#social-media h3 {
+    font-size: 2rem; /* Sets font size for the social media heading */
+    margin-bottom: 1rem; /* Adds space below heading */
+    color: #2c3e50; /* Dark grey color for heading */
+}
+
+.social-links {
+    list-style: none; /* Removes list styling */
+    padding: 0;
+    display: flex; /* Lays out links horizontally */
+    justify-content: center; /* Centers items horizontally */
+    gap: 2rem; /* Adds space between links */
+}
+
+.social-links li {
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.social-links a {
+    text-decoration: none; /* Removes underline from links */
+    color: #2980b9; /* Initial link color */
+    font-weight: bold; /* Makes link text bold */
+    font-size: 1.2rem; /* Sets font size for links */
+    display: flex; /* Centers icon and text */
+    align-items: center; 
+}
+
+.social-links a i {
+    margin-right: 0.5rem; /* Space between icon and text */
+    font-size: 1.5rem; /* Increases icon size */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+.social-links a:hover {
+    color: #f06d06; /* Changes link color on hover */
+    transform: translateY(-3px); /* Slight upward motion on hover */
+}
+
+/* Section styles */
+section {
+    margin-bottom: 2rem; /* Space below each section */
+}
+
+h2 {
+    color: #2980b9; /* Sets heading color */
+}
+
+main {
+    padding: 2rem; /* Adds padding inside main container */
+    margin: 0 auto; /* Centers main content */
+    max-width: 1200px; /* Limits maximum width */
+    background-color: #fff; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+}
+
+/* Blog post styles */
+.blog-post {
+    margin-bottom: 2rem; /* Space below each blog post */
+    padding: 1.5rem; /* Padding inside blog post container */
+    border: 1px solid #e0e0e0; /* Light border around posts */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fafafa; /* Light grey background */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.blog-post:hover {
+    transform: scale(1.02); /* Slightly enlarges post on hover */
+}
+
+h2 {
+    color: #2980b9; 
+}
+
+time {
+    font-size: 0.9rem; /* Smaller font for timestamp */
+    color: #888; /* Light grey color */
+    display: block; /* Makes timestamp a block element */
+    margin-bottom: 1rem; /* Space below timestamp */
+}
+
+.read-more {
+    display: inline-block; /* Makes the button inline but block-like */
+    margin-top: 1rem; /* Space above button */
+    padding: 0.5rem 1rem; /* Padding inside button */
+    background: #3498db; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background 0.3s; /* Smooth background color transition */
+}
+
+.read-more:hover {
+    background: #2980b9; 
+}
+
+/* Structural Selectors and Additional Pseudo-Classes */
+
+/* Child Combinators */
+#projects > .project {
+    margin: 1rem; /* Add margin to direct children of #projects */
+}
+
+/* Alternates background color for even-numbered items */
+.project:nth-child(2n) {
+    background: #f9f9f9; 
+}
+
+/* Removes margin for last item */
+.project:nth-last-child(1) {
+    margin-bottom: 0; /* Remove margin for the last project */
+}
+
+/* Highlights first project */
+.project:first-child {
+    border: 2px solid #2980b9; 
+}
+
+/* Relational Selectors */
+.project + .project {
+    border-top: 2px #ccc; /* Add a border between adjacent projects */
+}
+
+/* Validity Pseudo-Class */
+.contact-form input:valid {
+    border: 2px solid #4caf50; /* Green border if valid */
+}
+
+.contact-form input:invalid {
+    border: 2px solid #cc0000; /* Red border if invalid */
+}
+
+.contact-form input:focus:valid {
+    background-color: #e6ffed; /* Light green on focus if valid */
+    box-shadow: 0 0 5px #4caf50;
+}
+
+.contact-form input:focus:invalid {
+    background-color: #ffe6e6; /* Light red on focus if invalid */
+    box-shadow: 0 0 5px #cc0000;
+}
+
+/* Validity Pseudo-Class for Message Box (Textarea) */
+.contact-form textarea:valid {
+    border: 2px solid #4caf50; /* Green border if valid */
+}
+
+.contact-form textarea:invalid {
+    border: 2px solid #cc0000; /* Red border if invalid */
+}
+
+.contact-form textarea:focus:valid {
+    background-color: #e6ffed; 
+    box-shadow: 0 0 5px #ffffff;
+}
+
+.contact-form textarea:focus:invalid {
+    background-color: #ffe6e6; 
+    box-shadow: 0 0 5px #cc0000;
+}
+
+/* Button styling */
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; /* Pointer cursor on hover */
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease; /* Smooth transition for border and background changes */
+}
+
+.contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Smooth transition for border and background changes */
+}
+
+/* Validity Pseudo-Class for Message Box (Textarea) */
+textarea:valid {
+    border: 2px solid green; 
+}
+
+textarea:invalid {
+    border: 2px solid black; 
+}
+
+textarea:focus:valid {
+    background-color: #e6ffed; 
+}
+
+textarea:focus:invalid {
+    background-color: #ffe6e6; 
+}
+
+#page_links a{
+    color: white;
+}
+#page_links a:hover{
+    color: #f06d06;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 2rem; /* Padding inside footer */
+    background: #2980b9;
+    color: #fff;
+    position: relative; /* Positions footer at bottom of the page */
+    bottom: 0; /* Sticks footer to bottom */
+    width: 100%;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem; /* Adjust size for smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 1rem; /* Adjust spacing for smaller screens(nav items) */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    header nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    #hero {
+        padding: 2rem; /* Reduces padding for smaller screens */
+    }
+
+    .lrn-button {
+        width: 100%; /* Expands button to full width on small screen */
+        text-align: center; /* Centers text within button */
+    }
+
+    .project, .skills-list li, .hobbies-list li {
+        padding: 1.2rem; /* Reduces padding for smaller screens */
+    }
+}
